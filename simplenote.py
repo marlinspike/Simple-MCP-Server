@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-NOTES_FILE="/tmp/notes.md"
+NOTES_FILE=os.getenv("NOTES_FILE", "/tmp/notes.md")
 # Create an MCP server
 mcp = FastMCP("SimpleNotes", "1.0.0")
 
