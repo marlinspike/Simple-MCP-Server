@@ -55,3 +55,13 @@ Chat away! It will call the MCP Server when you ask it to perform actions that a
     - Add a note
     - Get all notes
     - Get the last note
+
+#### How MCP with an Agent works 
+- Loads environment variables (including your OpenAI API key) from a .env file.
+- Starts the SimpleNotes MCP server as a subprocess.
+- Creates an Agent with instructions to handle both note management and general queries.
+- Runs an interactive chat loop:
+- Prompts the user for input.
+- Sends the input to the agent, which uses the MCP server and OpenAI model to generate a response.
+- Prints the assistant’s reply.
+- Handles graceful exit on "quit", Ctrl+C, or EOF.
