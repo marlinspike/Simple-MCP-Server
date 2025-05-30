@@ -13,10 +13,11 @@ A simple example of an MCP Server that can be used to test MCP clients.
 3. Install the required dependencies:
     ```uv sync``` if you have `uv` installed, or
     ```pip install -r requirements.txt``` if you're using pip. I strongly recommend using `uv` as it is faster and more efficient, and it's required for the commands below.
-4. Create a .env file in the root of the project and add the following Keys:
+4. Create a .env file in the root of the project and add the following Keys (see .env.example):
 ```plaintext
 WEATHER_API_KEY=xxx
 OPENAI_API_KEY=sk-
+NOTES_FILE="/tmp/notes.md"
 ```
 
 You can get a free OpenWeatherMap API key from https://openweathermap.org/api and an OpenAI API key from https://platform.openai.com/signup.
